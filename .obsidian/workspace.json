@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "glossary.md",
+                "file": "domain-model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "glossary"
+              "title": "domain-model"
             }
           }
         ]
@@ -168,10 +168,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "glossary.md"
+                "file": "domain-model.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for glossary"
+              "title": "File properties for domain-model"
             }
           }
         ],
@@ -194,15 +194,19 @@
   },
   "active": "eef0414b0705f747",
   "lastOpenFiles": [
+    "development.md",
+    "CRM and Other Tools.md",
+    "aws-security-hardening-2026-06.md",
+    "auth-rbac.md",
+    "architecture-overview.md",
+    "api-reference.md",
+    "decisions/template.md",
+    "decisions/README.md",
+    "decisions/0001-shared-codebase-per-temple-env.md",
+    "glossary.md",
     "donation-flow.md",
     "domain-model.md",
     "Untitled.base",
-    "CRM and Other Tools.md",
-    "api-reference.md",
-    "architecture-overview.md",
-    "auth-rbac.md",
-    "development.md",
-    "glossary.md",
     "infrastructure.md",
     "README.md",
     "payments.md",
