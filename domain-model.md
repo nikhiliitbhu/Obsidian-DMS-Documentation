@@ -4,6 +4,8 @@ aliases: [Domain Model, Data Model, Schema, Entities]
 updated: 2026-06-19
 ---
 
+
+
 # Domain Model
 
 Reflects the **actual schema** in `database/migrations/` — the base `2018_09_24_234659_create_donation_base.php` plus incremental migrations. The `donation` table is the hub. See [[glossary]] for what these terms mean and [[donation-flow]] for how rows get created.
