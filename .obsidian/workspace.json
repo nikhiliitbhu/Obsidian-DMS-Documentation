@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "donation-flow.md",
+                "file": "glossary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "donation-flow"
+              "title": "glossary"
             }
           }
         ]
@@ -161,13 +161,25 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "975a0016c0dff665",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "glossary.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for glossary"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,27 +192,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "d42a1be31def193d",
+  "active": "eef0414b0705f747",
   "lastOpenFiles": [
-    "api-reference.md",
-    "payments.md",
-    "README.md",
-    "architecture-overview.md",
+    "donation-flow.md",
+    "domain-model.md",
+    "Untitled.base",
     "CRM and Other Tools.md",
+    "api-reference.md",
+    "architecture-overview.md",
+    "auth-rbac.md",
     "development.md",
+    "glossary.md",
+    "infrastructure.md",
+    "README.md",
+    "payments.md",
     "README.md.tmp.47937.1c3b2099e056",
     "CRM and Other Tools.md.tmp.47937.b3661d0e044b",
-    "domain-model.md",
-    "glossary.md",
-    "auth-rbac.md",
     "payments.md.tmp.47937.c7afa4ad9c3f",
-    "donation-flow.md",
     "donation-flow.md.tmp.47937.292a420d9dea",
     "development.md.tmp.47937.dd4db83914fd",
     "domain-model.md.tmp.47937.c5bada228904",
     "infrastructure.md.tmp.47937.c6fb9be178d9",
     "architecture-overview.md.tmp.47937.8dc7081dcb46",
-    "README.md.tmp.47937.5e7aebd51bd2",
-    "infrastructure.md"
+    "README.md.tmp.47937.5e7aebd51bd2"
   ]
 }
