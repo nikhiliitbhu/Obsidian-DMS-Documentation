@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"id":"grp-backend","type":"group","x":100,"y":-230,"width":1160,"height":390,"label":"Backend — Java Spring Boot microservices · ONE container per module, shared by ALL tenants"},
+		{"id":"grp-db","type":"group","x":100,"y":425,"width":1160,"height":175,"label":"PostgreSQL — ONE database per tenant"},
+		{"id":"grp-clients","type":"group","x":200,"y":-700,"width":900,"height":200,"label":"Clients — React ecosystem"},
+		{"id":"web","type":"text","text":"### React Web App\nDMS portal\n\nServes **all tenants**\nTime-Management = a page here","x":260,"y":-630,"width":360,"height":110,"color":"5"},
+		{"id":"android","type":"text","text":"### React Native\nAndroid app\n\nTime-Management = a section here","x":680,"y":-630,"width":360,"height":110,"color":"5"},
+		{"id":"auth","type":"text","text":"# Auth Module\nJava · Spring Boot\n\n**The only module that communicates with the frontend**","x":470,"y":-430,"width":380,"height":130,"color":"1"},
+		{"id":"svc-users","type":"text","text":"### Users\nidentity & people data","x":180,"y":-140,"width":300,"height":100,"color":"4"},
+		{"id":"svc-donations","type":"text","text":"### Donations\nmoney flow","x":520,"y":-140,"width":300,"height":100,"color":"4"},
+		{"id":"svc-tm","type":"text","text":"### Time Management\nall TM logic","x":860,"y":-140,"width":300,"height":100,"color":"4"},
+		{"id":"svc-others","type":"text","text":"### Other modules — to be defined\nreceipts · reports · projects/seva · notifications · attendance · …","x":180,"y":0,"width":980,"height":90,"color":"3"},
+		{"id":"notes","type":"text","text":"## Not yet decided — do not assume\n\n1. **Auth's exact role** — API gateway that proxies everything, or login-only with clients calling modules directly?\n2. **Where identity lives** — one shared account store for all tenants, or per-tenant? (\"1 person = 1 account\" points to shared)\n3. **Inter-service communication** — REST · gRPC · messaging\n4. **Tenant resolution** — subdomain · JWT claim · header\n5. **Transactions across services** — donations touch several modules\n6. **MySQL → PostgreSQL migration** — cutover or strangler fig\n7. **Orchestration** — Compose · ECS · EKS\n8. Module list beyond the four named","x":1340,"y":-630,"width":400,"height":400,"color":"3"},
+		{"id":"ai","type":"text","text":"### AI Agent\nPython · FastAPI\n\nSeparate service, shared by many apps","x":1340,"y":-140,"width":320,"height":140,"color":"6"},
+		{"id":"legend","type":"text","text":"**Diagram scope**\nThis is the architecture exactly as stated — nothing inferred.\nTime-Management is shown only as one module; TM design is parked.\n\n_Drawn 2026-09-24_","x":95,"y":640,"width":600,"height":140},
+		{"id":"db-noida","type":"text","text":"**Noida**","x":125,"y":470,"width":205,"height":90,"color":"2"},
+		{"id":"db-gnw","type":"text","text":"**GNW**","x":378,"y":470,"width":205,"height":90,"color":"2"},
+		{"id":"db-nex","type":"text","text":"**NEX**","x":615,"y":470,"width":205,"height":90,"color":"2"},
+		{"id":"db-whf","type":"text","text":"**WHF**","x":860,"y":470,"width":205,"height":90,"color":"2"},
+		{"id":"db-uat","type":"text","text":"**UAT**","x":1090,"y":470,"width":140,"height":90,"color":"2"}
+	],
+	"edges":[
+		{"id":"e-web-auth","fromNode":"web","fromSide":"bottom","toNode":"auth","toSide":"top","label":"APIs"},
+		{"id":"e-and-auth","fromNode":"android","fromSide":"bottom","toNode":"auth","toSide":"top","label":"APIs"},
+		{"id":"e-auth-users","fromNode":"auth","fromSide":"bottom","toNode":"svc-users","toSide":"top"},
+		{"id":"e-auth-don","fromNode":"auth","fromSide":"bottom","toNode":"svc-donations","toSide":"top"},
+		{"id":"e-auth-tm","fromNode":"auth","fromSide":"bottom","toNode":"svc-tm","toSide":"top"},
+		{"id":"e-auth-oth","fromNode":"auth","fromSide":"bottom","toNode":"svc-others","toSide":"left"},
+		{"id":"e-back-db","fromNode":"grp-backend","fromSide":"bottom","toNode":"grp-db","toSide":"top","label":"tenant-routed connections — each module reaches every tenant DB"},
+		{"id":"e-ai-back","fromNode":"ai","fromSide":"left","toNode":"grp-backend","toSide":"right","label":"HTTP"}
+	]
+}
